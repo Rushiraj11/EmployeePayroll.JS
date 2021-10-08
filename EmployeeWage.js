@@ -41,7 +41,21 @@ totalEmpHrs += empHrs;
 empDailyWageArr.push(calDailyWage(empHrs));
 
 }
-
+console.log("Daily Employee Wage stored in Array: " + empDailyWageArr);
 let empWage=calDailyWage(totalEmpHrs);
-console.log(" Total Days: " + totalWorkingDays + " Total Hrs: " + totalEmpHrs + " Employee Wage is : " + empWage);
+//console.log(" Total Days: " + totalWorkingDays + " Total Hrs: " + totalEmpHrs + " Employee Wage is : " + empWage);
+
+// UC7 A
+let totalEmpWage=0;
+function sum (dailywage) {
+    totalEmpWage += dailywage;
+}
+empDailyWageArr.forEach(sum); // for each method
+ console.log(" Total Employee Wage is : " + totalEmpWage);
+
+
+function totalWage(totalWage, dailyWage) {
+    return totalWage + dailyWage;
+}
+console.log(" Total Emp Wage with reduce: " + empDailyWageArr.reduce(totalWage,0)); // reduce method
 
