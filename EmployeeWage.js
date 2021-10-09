@@ -38,12 +38,13 @@ while (totalEmpHrs <= MAX_WORKING_HOURS && totalWorkingDays < NUM_WORKING_DAYS) 
 let empCheck=Math.floor(Math.random()*10)%3;
 let empHrs = getWorkingHours(empCheck);
 totalEmpHrs += empHrs;
-empDailyWageArr.push(calDailyWage(empHrs));
+let dailyWage = calDailyWage(empHrs)
+    empDailyWageArr.push(dailyWage);
 
 }
 console.log("Daily Employee Wage stored in Array: " + empDailyWageArr);
 let empWage=calDailyWage(totalEmpHrs);
-//console.log(" Total Days: " + totalWorkingDays + " Total Hrs: " + totalEmpHrs + " Employee Wage is : " + empWage);
+console.log(" Total Days: " + totalWorkingDays + " Total Hrs: " + totalEmpHrs + " Employee Wage is : " + empWage);
 
 // UC7 A
 let totalEmpWage=0;
@@ -74,3 +75,10 @@ function fulltimeDailyWage(dailywage) {
 }
 let fullDayDailyWageArr = mapDailyWithWageArray.filter(fulltimeDailyWage);// filter method to filter required value from array 
 console.log(fullDayDailyWageArr);//and printing it as new array
+
+
+//UC7D
+function findFulltimeWage(dailywage) {
+    return dailywage.includes("160");
+}
+console.log(" First FullTime wage was earned on Day: " + mapDailyWithWageArray.find(findFulltimeWage));
