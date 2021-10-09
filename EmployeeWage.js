@@ -65,6 +65,12 @@ function DayWithWage(dailyWage) {
     counter++;
     return counter + " == " + dailyWage;
 }
-let mapDailyWithWageArray = empDailyWageArr.map(DayWithWage);// using Array map
-console.log("\nUsing Map Printing Day with DailyWage.\n");
+let mapDailyWithWageArray = empDailyWageArr.map(DayWithWage);// using Array map printing daily wage with respective to day
 console.log(mapDailyWithWageArray);
+
+// UC7C
+function fulltimeDailyWage(dailywage) {
+    return dailywage.includes("160");// using includes to get required value only
+}
+let fullDayDailyWageArr = mapDailyWithWageArray.filter(fulltimeDailyWage);// filter method to filter required value from array 
+console.log(fullDayDailyWageArr);//and printing it as new array
