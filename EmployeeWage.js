@@ -87,4 +87,4 @@ console.log(" First FullTime wage was earned on Day: " + mapDailyWithWageArray.f
 function isFulltimeWage(dailyWage) {
     return dailyWage.includes("160");
 }
-console.log(" All Elements have Full Time Wage: " + fullDayDailyWageArr.every(isFulltimeWage));
+console.log(" All Elements have Full Time Wage: " + fullDayDailyWageArr.every(isFulltimeWage)); // to check condition true or false using "every"
