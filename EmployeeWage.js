@@ -81,4 +81,10 @@ console.log(fullDayDailyWageArr);//and printing it as new array
 function findFulltimeWage(dailywage) {
     return dailywage.includes("160");
 }
-console.log(" First FullTime wage was earned on Day: " + mapDailyWithWageArray.find(findFulltimeWage));
+console.log(" First FullTime wage was earned on Day: " + mapDailyWithWageArray.find(findFulltimeWage)); // to find 1st occurance
+
+//7E
+function isFulltimeWage(dailyWage) {
+    return dailyWage.includes("160");
+}
+console.log(" All Elements have Full Time Wage: " + fullDayDailyWageArr.every(isFulltimeWage));
