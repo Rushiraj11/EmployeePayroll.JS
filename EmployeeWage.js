@@ -87,4 +87,11 @@ console.log(" First FullTime wage was earned on Day: " + mapDailyWithWageArray.f
 function isFulltimeWage(dailyWage) {
     return dailyWage.includes("160");
 }
-console.log(" All Elements have Full Time Wage: " + fullDayDailyWageArr.every(isFulltimeWage)); // to check condition true or false using "every"
+console.log(" All Elements have Full Time Wage: " + fullDayDailyWageArr.every(isFulltimeWage)); // to check condition true or false using "every method"
+
+
+//7F
+function isPartTimeWage(dailywage) {
+    return dailywage.includes("80"); 
+}
+console.log(" All Elements have Part Time Wage: " + mapDailyWithWageArray.some(isPartTimeWage));// to check if any Part time is present using "some"
